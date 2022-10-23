@@ -17,8 +17,8 @@ Running Steps:
 
 * A introduction for VFIO: Virtual Function I/O (VFIO) is a modern device passthrough solution that takes advantage of the DMA Remapping and Interrupt Remapping features provided by VT-d/AMD-Vi technology to ensure the DMA security of passthrough devices while achieving close to physical device I/O performance. User-state processes can directly access the hardware using the VFIO driver, and the whole process is very secure because it is protected by the IOMMU and can be used directly by unprivileged users. In other words, VFIO is a complete userspace driver solution because it can safely present device I/O, interrupts, DMA and other capabilities to the userspace.
 
-5. Using "./setup-hugetlbfs.sh" command to allocate 2MB memory pages for the driver (for higher performance). Of course, you can also use "./setup-hugetlbfs_1G.sh" command to allocate 1GB memory pages fot the driver.
+4. Using "./setup-hugetlbfs.sh" command to allocate 2MB memory pages for the driver (for higher performance). Of course, you can also use "./setup-hugetlbfs_1G.sh" command to allocate 1GB memory pages fot the driver.
 
-6. Using "gcc memory.c vfio.c stats.c –o driver_forwarding -lpthread" to compile the code file.
+5. Using "gcc memory.c vfio.c stats.c –o driver_forwarding -lpthread" to compile the code file.
 
-Using "./driver_forwarding 0000:02:01.0" to run the user-space driver forwarding test.
+6. Using "./driver_forwarding 0000:02:01.0" to run the user-space driver forwarding test.
